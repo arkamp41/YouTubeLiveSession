@@ -7,9 +7,9 @@ ENV PYTHONUNBUFFERED 1
 
 RUN pip install --upgrade pip
 
-COPY ./Requirement.txt /usr/src/app
+COPY . /requirement.txt /usr/src/app
 
-RUN pip install -r Requirement.txt
+RUN pip install -r requirement.txt
 
 COPY . /usr/src/app
 
