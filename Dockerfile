@@ -1,17 +1,17 @@
 FROM python:3.8.13-slim-buster
 
-WORKDIR /usr/app
+WORKDIR /main/usr/app
 
 ENV PYTHONDONTWRITEBYTECODE 1
 ENV PYTHONUNBUFFERED 1
 
 RUN pip install --upgrade pip
 
-COPY . /requirement.txt /usr/app
+COPY . /requirement.txt /main/usr/app
 
 RUN pip install -r requirement.txt
 
-COPY . /usr/app
+COPY . /main/usr/app
 
 EXPOSE 8000
 
